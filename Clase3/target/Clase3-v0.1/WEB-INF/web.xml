@@ -44,5 +44,9 @@
         <error-code>404</error-code>
         <location>/error404.html</location>
     </error-page>
-    
+    <error-page>
+        <exception-type>java.lang.NullPointerException</exception-type>
+        <exception-type>java.lang.NumberFormatException</exception-type>
+        <location>/errorsParams.html</location>
+    </error-page>
 </web-app>
