@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <servlet>
+        <servlet-name>Test</servlet-name>
+        <servlet-class>ar.com.eduit.curso.java.web.servlets.Test</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Calculadora</servlet-name>
+        <servlet-class>ar.com.eduit.curso.java.web.servlets.Calculadora</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Test2</servlet-name>
+        <servlet-class>ar.com.eduit.curso.java.web.servlets.Test2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>ar.com.eduit.curso.java.web.servlets.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Test</servlet-name>
+        <url-pattern>/Test</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Calculadora</servlet-name>
+        <url-pattern>/Calculadora</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Test2</servlet-name>
+        <url-pattern>/Test2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            9
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404.html</location>
+    </error-page>
+    
+</web-app>
