@@ -13,7 +13,7 @@ public class Server {
         System.out.println("Iniciando Servidor...");
         String mensaje = "<h1>Servidor de Henrry!</h1>";
         mensaje = "HTTP/1.1 200 OK\n" + "Content-Length: " + mensaje.length() + "\n\n" + mensaje;
-        try ( ServerSocket ss = new ServerSocket(8080);) {
+        try ( ServerSocket ss = new ServerSocket(8085);) {
             while (true) {
                 System.out.println("Esperando conexion de cliente");
                 try ( Socket so = ss.accept();  OutputStream out = so.getOutputStream();) {
