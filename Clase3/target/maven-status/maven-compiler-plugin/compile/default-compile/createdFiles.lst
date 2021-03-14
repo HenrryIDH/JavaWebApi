@@ -3,3 +3,5 @@ ar\com\eduit\curso\java\web\servlets\Calculadora.class
 ar\com\eduit\curso\java\web\servlets\Login.class
 ar\com\eduit\curso\java\web\servlets\Test2.class
 ar\com\eduit\curso\java\socket\Server.class
+ar\com\eduit\curso\java\web\repositories\list\ArticuloRepositoryFactory.class
+ar\com\eduit\curso\java\web\test\TestRepository.class
