@@ -9,12 +9,17 @@ public class Articulo {
     private String descripcion;
     private float precio;
 
+    public Articulo() {
+    }
+    
+    
     public Articulo(int id, String descripcion, float precio) {
         this.id = id;
         this.descripcion = descripcion;
         this.precio = precio;
     }
-@Override
+
+    @Override
     public String toString() {
         return "Articulo{" + "id=" + id + ", descripcion=" + descripcion + ", precio=" + precio + '}';
     }
@@ -23,20 +28,20 @@ public class Articulo {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getDescripcion() {
         return descripcion;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
     public float getPrecio() {
         return precio;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public void setPrecio(float precio) {
