@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Articulos</title>
+    </h:head>
+    <h:body>
+        <h:outputLabel value="Mantenimiento de Articulos"/>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Id: "/>
+                <h:inputText value="#{articuloMB.articulo.id}" />
+                <h:outputLabel value="Descripcion: "/>
+                <h:inputText value="#{articuloMB.articulo.descripcion}"/>
+                <h:outputLabel value="Precio: "/>
+                <h:inputText value="#{articuloMB.articulo.precio}"/>
+                <h:outputLabel value="Medio de Pago"/>
+                <h:selectOneMenu style="width: 150px">
+                    <!--
+                    <f:selectItem itemLabel="CONTADO"/>
+                    <f:selectItem itemLabel="DEPOSITO"/>
+                    <f:selectItem itemLabel="TARJETA"/>
+                    <f:selectItem itemLabel="DEBITO"/>   
+                    -->
+
+                    <f:selectItems value="#{tipoDeDatosMB.medioDePago}"/>
+                </h:selectOneMenu>
+
+                <h:commandButton value="Guardar" action="#{articuloMB.save()}"/>
+                <h:outputLabel value="#{articuloMB.mensaje}"/>
+
+            </h:panelGrid>
+        </h:form>
+
+        <h:form>
+            <h:outputLabel value="Buscar Articulo: "/>
+            <h:inputText value="#{articuloMB.buscarDescripcion}"/>
+            <h:dataTable value="#{articuloMB.likeDescripcion}" var="a">
+                <h:column >#{a.id}</h:column>
+                <h:column>#{a.descripcion}</h:column>
+                <h:column>#{a.precio}</h:column>
+
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
+
